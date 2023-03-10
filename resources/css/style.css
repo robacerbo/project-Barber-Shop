@@ -1,0 +1,407 @@
+* {
+    font-family: 'Updock', cursive;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.ff-m {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.ff-s {
+    font-family: 'Updock', cursive;
+}
+
+
+:root {
+    --m-color: #dcdcdc !important;
+    --s-color: #8e000edb !important;
+    --t-color: #ffffff !important;
+    --a-color: #6B7280 !important;
+    
+    
+}
+
+body {
+    background-color: var(--t-color);
+}
+
+.tx-m {
+    color: var(--m-color) !important;
+}
+
+.tx-s {
+    color: var(--s-color) !important;
+}
+
+.tx-a {
+    color: var(--a-color) !important;
+}
+
+.bg-m {
+    color: var(--m-color) !important;
+}
+
+.bg-s {
+    color: var(--s-color) !important;
+}
+
+.bg-a {
+    color: var(--a-color) !important;
+}
+
+/* NAVBAR */
+.btnPrenota2 {
+    background: var(--s-color);
+    border: 1px solid var(--s-color); 
+}
+
+.btnPrenota2:hover {
+    background-color: var(--s-color);
+    color: black;
+    border: 1px solid white;
+    transition: background-color 1.5s ease-out;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid var(--s-color);
+    transition-duration: 0.8s;
+}
+
+.navbar {
+    height: 10vh;
+    transition: .4s
+}
+.nav-active {
+    background-color: #212529;
+}
+
+.offcanvas {
+    transition: 0.6s ease-out, visibility 1s;
+    visibility: visible;
+}
+
+.dropdown-item:hover {
+    background-color: var(--s-color);
+    color: black;
+    border: 1px solid white;
+    transition: background-color 0.3s ease-out;
+}
+
+/* HOME PAGE */
+.contImgBackground {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(../../public/media/bgimg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+.colHeaderHome {
+  height: 50%;
+  justify-items: space-around;
+}
+
+@media screen and (max-width: 600px) {
+.colHeaderHome {
+  height: 75% !important;
+  justify-content: space-evenly !important;
+}
+}
+
+
+.btnPrenota {
+  height: 70px;
+  width: 180px;
+  background: transparent;
+  border: 2px solid var(--s-color);
+  border-style: dotted;
+  
+}
+
+.btnPrenota:hover {
+  background-color: var(--s-color);
+  color: black;
+  border: 1px solid white;
+  transition: background-color 0.5s ease-out;
+}
+
+.bg-img-contatti {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(../../public/media/bg-img-contatti.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.myContAcademy {
+  background-color: var(--a-color);
+  background-image: url(/public/media/imgcourse2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.h3ScegliAnim {
+transition: all 1.5s ease;
+animation: 1.5s ease-in-out swingContatta;
+}
+@keyframes swingContatta {
+from {
+    transform: translateX(-100%);
+    left: 0;
+  }
+  to {
+    left: 100%;
+    transform: translateX(0);
+  }
+}
+
+.h3SuccessiAnim {
+transition: all 1.5s ease;
+animation: 1.5s ease-in-out swingForm;
+}
+@keyframes swingForm {
+from {
+    transform: translateX(100%);
+    right: -100%;
+  }
+  to {
+    right: 0;
+    transform: translateX(0);
+  }
+}
+
+.h1OnlyAnim {
+  animation: fadeIn 3s;
+}
+
+.spanAcademyAnim {
+  animation: fadeIn 6s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.btnCardAcademy {
+  height: 45px;
+  width: 150px;
+  color: var(--s-color)!important;
+  border: 2px solid black;  
+}
+.btnCardAcademy:hover {
+    background-color: var(--s-color);
+    color: white!important;
+    border: 1px solid black;
+    transition: background-color 0.5s ease-out;
+}
+
+
+
+/* CONTATTI */
+.myContForm {
+    background: var(--a-color);
+}
+
+.myImgContatta {
+    transition: all 1s ease;
+    animation: 1s ease-in-out swingContatta;
+}
+@keyframes swingContatta {
+    from {
+        transform: translateX(-100%);
+        left: 0;
+      }
+      to {
+        left: 100%;
+        transform: translateX(0);
+      }
+    }
+
+.contactFormAni {
+    transition: all 1s ease;
+    animation: 1s ease-in-out swingForm;
+}
+@keyframes swingForm {
+    from {
+        transform: translateX(100%);
+        right: -100%;
+      }
+      to {
+        right: 0;
+        transform: translateX(0);
+      }
+    }
+
+.myRichiestaAni {
+    animation: 3s anim-popoutin ease;
+}
+
+@keyframes anim-popoutin {
+    0% {
+      color: black;
+      transform: scale(0);
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      color: var(--t-color);
+      transform: scale(1.3);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      color: black;
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      color: var(--s-color);
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+.btnRichiesta {
+    height: 80px;
+    width: 200px;
+    color: var(--a-color)!important;
+    border: 2px solid var(--s-color);
+    border-style: dotted;    
+}
+.btnRichiesta:hover {
+    background-color: black;
+    color: white!important;
+    border: 1px solid white;
+    transition: background-color 0.5s ease-out;
+}
+
+
+.container-chevron {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    top: 50px;
+    cursor: pointer;
+  }
+  
+  .chevron {
+    
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+    cursor: pointer;
+    
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+    cursor: pointer;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+    cursor: pointer;
+    
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+    cursor: pointer;
+    background-color: var(--s-color);
+
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+    cursor: pointer;
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+    cursor: pointer;
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+
+.btnServizi {
+    background: black;
+    border: 1px solid var(--s-color);
+}
+
+.btnServizi:hover {
+    background-color: var(--s-color);
+    border: 1px solid white;
+    transition: background-color 0.5s ease-out;
+}
+
+
+
+/* PAGINA CREAZIONE CORSO */
+
+.myContCourse {
+  background-color: var(--a-color);
+  background-image: url(/public/media/imgcourse2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.btnBackHome {
+  height: 45px;
+  width: 200px;
+  color: var(--a-color)!important;
+  border: 2px solid var(--s-color);  
+}
+.btnBackHome:hover {
+    background-color: black;
+    color: white!important;
+    border: 1px solid white;
+    transition: background-color 0.5s ease-out;
+}
+
+.btnInsCorso {
+  height: 80px;
+  width: 200px;
+  color: var(--a-color)!important;
+  border: 2px solid var(--s-color);    
+}
+.btnInsCorso:hover {
+  background-color: rgb(0, 85, 7);
+  color: white!important;
+  border: 1px solid white;
+  transition: background-color 0.5s ease-out;
+}
