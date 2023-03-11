@@ -11,6 +11,7 @@ Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contac
 Route::post('/contattaci/submit', [PublicController::class, 'contact_us_submit'])->name('contact_us_submit');
 Route::get('/contattaci/submit/successful', [PublicController::class, 'contact_us_successful'])->name('contact_us_successful');
 
-//ROTTE ACADEMY COURSES
-Route::get('/courses/create', [CourseController::class, 'create'])->name('course.create');
-Route::post('/courses/store', [CourseController::class, 'store'])->name('course.store');
+//ROTTE ACADEMY & COURSES
+Route::get('/academy/index', [CourseController::class, 'index'])->name('course.index');
+Route::get('/academy/CourseCreate', [CourseController::class, 'create'])->name('course.create');
+Route::post('/academy/CourseStore', [CourseController::class, 'store'])->name('course.store');

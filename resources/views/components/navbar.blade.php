@@ -17,7 +17,7 @@
               <li class="nav-item dropdown text-center">
                 <a class="nav-link dropdown-toggle tx-m" href="#" data-bs-toggle="dropdown" aria-expanded="false">Servizi</a>
                 <ul class="dropdown-menu bg-dark">
-                  <li><a class="dropdown-item tx-m" href="{{route('course.create')}}">Only My...<span class="tx-m"> Academy </span></a></li>
+                  <li><a class="dropdown-item tx-m" href="{{route('course.index')}}">Only My...<span class="tx-m"> Academy </span></a></li>
                   <li><a class="dropdown-item tx-m" href="#">Only My...<span class="tx-m"> Products </span></a></li>
                   <li><a class="dropdown-item tx-m" href="#">Only My...<span class="tx-m"> Prices </span></a></li>
                 </ul>

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 class PublicController extends Controller
 {
     public function homepage() {
-        $courses = Course::all();
+        $courses = Course::orderBy('created_at', 'DESC')->take(3)->get();
         return view('welcome', compact('courses'));
     }
 
