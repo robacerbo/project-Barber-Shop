@@ -15,3 +15,4 @@ Route::get('/contattaci/submit/successful', [PublicController::class, 'contact_u
 Route::get('/academy/index', [CourseController::class, 'index'])->name('course.index');
 Route::get('/academy/CourseCreate', [CourseController::class, 'create'])->name('course.create');
 Route::post('/academy/CourseStore', [CourseController::class, 'store'])->name('course.store');
+Route::get('academy/show/{course}', [CourseController::class, 'show'])->name('course.show');

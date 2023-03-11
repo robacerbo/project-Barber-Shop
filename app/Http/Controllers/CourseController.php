@@ -35,6 +35,14 @@ class CourseController extends Controller
             'certificate' =>$request->certificate,
             'coverimg' =>$request->file('coverimg')->store('public/covers'),
         ]);
-            return redirect(route('homepage'))->with('courseCreated', 'Il corso è stato aggiunto correttamente.');
+            return redirect(route('course.index'))->with('courseCreated', 'Il corso è stato aggiunto correttamente.');
     }
+
+    public function show(Course $course){
+
+        return view('course.show', compact('course'));
+
+    }
+
+
 }

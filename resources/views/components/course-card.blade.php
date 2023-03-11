@@ -30,8 +30,10 @@
         
         </ul>
         <div class="card-body text-center">
-            <a href="{{route('homepage')}}" type="button" class="btn btn-light btn-lg rounded-0 btnCardAcademy tx-s fw-bold fs-6 text-center">Acquista</a>
+            <a href="{{route('course.index')}}" type="button" class="btn btn-light btn-lg rounded-0 btnCardAcademy tx-s fw-bold fs-6 text-center">Acquista</a>
+            <a href="{{route('course.show', compact('course'))}}" type="button" class="btn btn-light btn-lg rounded-0 btnCardAcademy tx-s fw-bold fs-6 text-center">Dettaglio</a>
         </div>
+        
     </div>
 </div>
 
