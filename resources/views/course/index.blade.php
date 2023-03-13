@@ -8,11 +8,14 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-12 col-md-5 p-0 m-0 colScegli px-md-3 px-3">
-            <h3 id="h3Scegli" class="text-md-end text-center tx-t align items center ff-m h3Scegli h3ScegliAnim">Scegli il corso che fa per te...</h3>
+            <div class="col-12 col-md-5 p-0 m-0 colScegli px-5">
+            <h3 id="h3Scegli" class="text-center tx-t align items center ff-m h3Scegli h3ScegliAnim2">Scegli il corso che fa per te...</h3>
+            <h3 id="h3Success" class="text-center tx-s align items center ff-m h3Successi h3SuccessiAnim2">E' da qui che nascono i nuovi successi!</h3>
         </div>
-            <div class="col-12 col-md-6 p-0 m-0 colSuccessi ps-md-0 pe-md-5 px-3">
-            <h3 id="h3Success" class="text-md-start text-center tx-s align items center ff-m h3Successi h3SuccessiAnim">E' da qui che nascono i nuovi successi!</h3>
+            <div class="col-12 col-md-2 p-0 m-0 colSuccessi px-5 d-flex align-items-center">
+                <h3 class="text-center tx-s align items center ff-m h3oppure h3oppureAnim show">oppure</h3>
+            </div>
+            <div class="col-12 col-md-5 p-0 m-0 colSuccessi px-5">
             </div>
         </div>
         

@@ -11,47 +11,45 @@ window.addEventListener('scroll', function(e) {
   }
 })
 
-//ANIMATION SCROLL CONTATTACI
+//ANIMATION CLICK ON CHEVRON SEZIONE CONTATTA
 
-let myRichiesta = document.querySelector('.myRichiesta');
-let imgContatta = document.querySelector('#imgContatta');
-let contactForm = document.querySelector('#contactForm');
-let newCourse = document.querySelector('#newCourse');
+const chevronDown = document.querySelector('#contChevron');
 
-myRichiesta.classList.remove('myRichiestaAni');
-imgContatta.classList.remove('myImgContatta');
-contactForm.classList.remove('contactFormAni');
+if (chevronDown) {
+  chevronDown.addEventListener('click', function() {
+    let nextSection = document.querySelector('#contForm');
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+  });
+}
 
 
-let observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      myRichiesta.classList.add('myRichiestaAni');
-      imgContatta.classList.add('myImgContatta');
-      contactForm.classList.add('contactFormAni');
-      return;
-    }
-
-    myRichiesta.classList.remove('myRichiestaAni');
-    imgContatta.classList.remove('myImgContatta');
-    contactForm.classList.remove('contactFormAni');
+//ANIMATIONS HIDDEN - HIDDEN LEFT - HIDDEN RIGHT E CUSTOMS
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+      } else {
+          entry.target.classList.remove('show');
+      }
   });
 });
 
-observer.observe(document.querySelector('#ColForm'));
-observer.observe(document.querySelector('#imgContatta'));
-observer.observe(document.querySelector('#contactForm'));
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 
+const hiddenLeftElements = document.querySelectorAll('.hidden-left');
+hiddenLeftElements.forEach((el) => observer.observe(el));
 
-//ANIMATION CLICK ON CHEVRON SEZIONE CONTATTA
+const hiddenRightElements = document.querySelectorAll('.hidden-right');
+hiddenRightElements.forEach((el) => observer.observe(el));
 
-let chevron = document.querySelector('#contChevron');
+const hiddenTop = document.querySelectorAll('.hidden-top');
+hiddenTop.forEach((el) => observer.observe(el));
 
-// Aggiungi l'evento di click all'elemento
-chevron.addEventListener('click', function() {
-  // Seleziona l'elemento a cui eseguire lo scrolling
-  let nextSection = document.querySelector('#contForm');
+const hiddenDown = document.querySelectorAll('.hidden-down');
+hiddenDown.forEach((el) => observer.observe(el));
 
-  // Esegui lo scrolling
-  nextSection.scrollIntoView({ behavior: 'smooth' });
-});
+const popoutIn = document.querySelectorAll('.popoutin');
+popoutIn.forEach((el) => observer.observe(el));
+

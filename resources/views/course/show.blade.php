@@ -9,7 +9,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 py-5">
                 <div class="card h-100">
-                    <img src="{{Storage::url($course->coverimg)}}" class="img-fluid" alt="...">
+                    <img src="{{Storage::url($course->coverimg)}}" class="img-fluid img-cards" alt="...">
                     <div class="card-body bg-dark">
                     <h5 class="card-title tx-s text-center">{{$course->name}}</h5>
                     <p class="card-text tx-m text-center">{{$course->description}}</p>

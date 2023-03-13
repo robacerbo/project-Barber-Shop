@@ -141,7 +141,7 @@ body {
   background-attachment: fixed;
 }
 
-.h3ScegliAnim {
+/* .h3ScegliAnim {
 transition: all 1.5s ease;
 animation: 1.5s ease-in-out swingContatta;
 }
@@ -155,6 +155,20 @@ from {
     transform: translateX(0);
   }
 }
+.h3ScegliAnim2 {
+  transition: all 1.5s ease;
+  animation: 1.5s ease-in-out swingContatta;
+  }
+  @keyframes swingContatta {
+  from {
+      transform: translateX(-100%);
+      left: 0;
+    }
+    to {
+      left: 100%;
+      transform: translateX(0);
+    }
+  }
 
 .h3SuccessiAnim {
 transition: all 1.5s ease;
@@ -170,6 +184,26 @@ from {
     transform: translateX(0);
   }
 }
+.h3SuccessiAnim2 {
+  transition: all 1.5s ease;
+  animation: 1.5s ease-in-out swingContatta;
+  }
+  @keyframes swingContatta {
+  from {
+      transform: translateX(-100%);
+      left: 0;
+    }
+    to {
+      left: 100%;
+      transform: translateX(0);
+    }
+  }
+
+.h3oppureAnim {    
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 
 .h1OnlyAnim {
   animation: fadeIn 3s;
@@ -181,7 +215,7 @@ from {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
+} */
 
 .btnCardAcademy {
   height: 45px;
@@ -203,9 +237,15 @@ from {
     background: var(--a-color);
 }
 
-.myImgContatta {
+/* .myImgContatta {
     transition: all 1s ease;
     animation: 1s ease-in-out swingContatta;
+}
+
+@media screen and (max-width:600px) {
+    .myImgContatta {
+      width: 80%;
+    }
 }
 @keyframes swingContatta {
     from {
@@ -231,10 +271,12 @@ from {
         right: 0;
         transform: translateX(0);
       }
-    }
+    } */
 
-.myRichiestaAni {
+/* .myRichiestaAni {
     animation: 3s anim-popoutin ease;
+    color: var(--s-color);
+    
 }
 
 @keyframes anim-popoutin {
@@ -251,19 +293,19 @@ from {
       text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
     }
     50% {
-      color: black;
-      transform: scale(1);
-      opacity: 1;
-      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
-    }
-    100% {
-      /* animate nothing to add pause at the end of animation */
       color: var(--s-color);
       transform: scale(1);
       opacity: 1;
       text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
     }
-  }
+    100% {
+      
+      color: var(--s-color);
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  } */
 
 .btnRichiesta {
     height: 80px;
@@ -273,7 +315,7 @@ from {
     border-style: dotted;    
 }
 .btnRichiesta:hover {
-    background-color: black;
+    background-color: rgb(0, 102, 32);
     color: white!important;
     border: 1px solid white;
     transition: background-color 0.5s ease-out;
@@ -404,4 +446,110 @@ from {
   color: white!important;
   border: 1px solid white;
   transition: background-color 0.5s ease-out;
+}
+
+.img-cards {
+  width: 100%;
+  max-height: 35vh;
+  object-fit: cover;
+}
+
+.myCardBody {
+  flex: none;
+  width: 100%;
+  height: 15vh;
+  /* object-fit: cover; */
+}
+
+.btnTuttiCorsi {
+  height: 70px;
+  width: 200px;
+  background: transparent;
+  border: 2px solid var(--s-color);
+  border-style: dotted;
+  
+}
+
+.btnTuttiCorsi:hover {
+  background-color: var(--s-color);
+  color: black;
+  border: 1px solid white;
+  transition: background-color 0.5s ease-out;
+}
+
+
+/* ANIMATION CSS PER FUNZIONI JS */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(0);
+    transition: all 2s;
+}
+
+.hidden-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.hidden-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 2s;
+}
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    
+}
+
+.hidden-top {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 2s;
+    
+}
+
+.hidden-top.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  
+}
+
+.hidden-down {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 2s;
+  
+}
+.hidden-down.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  
+}
+
+.popoutin {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow: 1px 1px 0px #000;
+  transition: all 0.5s ease-out;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: popoutin;
+  animation-duration: 3s;
+}
+
+.popoutin.show {
+  transform: scale(1);
+  opacity: 1;
 }
