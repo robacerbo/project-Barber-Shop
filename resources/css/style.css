@@ -59,7 +59,7 @@ body {
     background-color: var(--s-color);
     color: black;
     border: 1px solid white;
-    transition: background-color 1.5s ease-out;
+    transition: background-color 0.5s ease-out;
 }
 
 .nav-link:hover {
@@ -69,10 +69,14 @@ body {
 
 .navbar {
     height: 10vh;
-    transition: .4s
+    transition: .4s;
+
+
 }
+
 .nav-active {
     background-color: #212529;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .offcanvas {
@@ -86,6 +90,8 @@ body {
     border: 1px solid white;
     transition: background-color 0.3s ease-out;
 }
+
+
 
 /* HOME PAGE */
 .contImgBackground {
@@ -483,21 +489,21 @@ from {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(0);
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
 .hidden-left {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
 .hidden-right {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(100%);
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
 
@@ -512,7 +518,7 @@ from {
     opacity: 0;
     filter: blur(5px);
     transform: translateY(100%);
-    transition: all 2s;
+    transition: all 1.5s;
     
 }
 
@@ -527,7 +533,7 @@ from {
   opacity: 0;
   filter: blur(5px);
   transform: translateY(-100%);
-  transition: all 2s;
+  transition: all 1.5s;
   
 }
 .hidden-down.show {
@@ -553,3 +559,4 @@ from {
   transform: scale(1);
   opacity: 1;
 }
+

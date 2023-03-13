@@ -1,15 +1,15 @@
 <x-layout>
     <div class="container-fluid vh-100 contImgBackground">
-        <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="container vh-100 d-flex align-items-center justify-content-center">
             <div class="row h-100 align-items-center">
                 <div class="col-12 h-25"></div>
                 <div class="col-12 h-50 d-flex flex-column justify-content-around text-center colHeaderHome">
-                        <h1 class="display-3 text-center tx-m align items center justify-content-center ff-m hidden">
+                        <h1 class="display-3 text-center tx-m align items center justify-content-center ff-m hidden-down">
                         Looking Your Best</h1>
                         <h1 class="display-3 text-center tx-m align items center justify-content-center ff-m hidden-left">Never Goes Out of Style</h1>
                     
                     <div class="d-flex justify-content-center hidden-top">
-                    <button class="btn btn-light btn-lg rounded-0 btnPrenota tx-m ">Prenota Ora</button>
+                    <button class="btn btn-light btn-lg rounded-0 btnPrenota tx-m">Prenota Ora</button>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
             </div>
             
             <div class="col-12 col-md-6">
-                <h1 id="Academy2" class="display-3 tx-s text-md-start text-center hidden-right">Academy</h1>
+                <h1 id="Academy2" class="display-3 tx-s text-md-start text-center hidden popoutin">Academy</h1>
             </div>
             <h5 class="text-center tx-t align items center justify-content-center ff-m hidden">La nostra accademia, sotto l’occhio attento dei nostri barber,<br> propone corsi accurati teorici e pratici per apprendere tutti i segreti del mestiere</h5>
         </div>
