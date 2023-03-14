@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ContactRequest;
-use App\Mail\ContactEmail;
 use App\Models\Course;
+use App\Mail\ContactEmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\ContactRequest;
 
 class PublicController extends Controller
 {
@@ -33,5 +34,19 @@ class PublicController extends Controller
 
     public function contact_us_successful() {
         return view('contact_us_successful');
+    }
+
+    public function profile(){
+        //PRIMO METODO: SFUTTARE RELAZIONE
+        // return view('profile');
+
+
+
+        // FLUENT INTERFACE + METHOD CHAINING
+        //SECONDO METODO: SFRUTTARE UNA QUERY AL DATABASE
+        $courses = Course::where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
+        //$query (c'è ma è nascosta) --> where --> orderBy --> get
+        //tutti i record--> recupera solo quelli dell'utente loggato--> ordinameli --> crea collezione
+        return view('profile', compact('courses'));
     }
 }

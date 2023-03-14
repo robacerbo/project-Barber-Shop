@@ -101,6 +101,7 @@ body {
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
+  height: 90vh;
 }
 .colHeaderHome {
   height: 50%;
@@ -452,8 +453,29 @@ from {
     transition: background-color 0.5s ease-out;
 }
 
+/* PROFILE PAGE */
 
+.contAreaRiservata {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(../../public/media/bg-img-contatti.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
+}
+
+.topCardProfile {
+  background-color: #212529;
+  height:200px;
+}
+
+.bodyCardShadow {
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.rowShadow {
+  background:#ccc;
+}
 /* PAGINA CREAZIONE CORSO */
 
 .myContCourse {

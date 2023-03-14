@@ -1,6 +1,6 @@
 <x-layout>
-    <div class="container-fluid vh-100 contImgBackground">
-        <div class="container vh-100 d-flex align-items-center justify-content-center">
+    <div class="container-fluid contImgBackground">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
             <div class="row h-100 align-items-center">
                 <div class="col-12 h-25"></div>
                 <div class="col-12 h-50 d-flex flex-column justify-content-around text-center colHeaderHome">

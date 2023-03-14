@@ -1,6 +1,6 @@
 <header>
-  <div class="container-fluid">
-  <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid bg-dark">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand tx-s" href="{{route('homepage')}}">ONLY MY STYLE</a>
       <button id="navbar-toggler-open" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
@@ -37,7 +37,7 @@
                     Benvenuto {{Auth::user()->name}}
                   </button>
                   <ul class="dropdown-menu w-50 bg-dark border-white text-center mx-auto">
-                    <li><a class="dropdown-item tx-m" href="#">Profilo</a></li>
+                    <li><a class="dropdown-item tx-m" href="{{route('profile')}}">Profilo</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item tx-m" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                     <form action="{{route('logout')}}" method="POST" id="form-logout"class="d-none">@csrf</form>

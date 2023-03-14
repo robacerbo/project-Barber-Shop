@@ -1,6 +1,6 @@
 <x-layout>
     <div id="contShowCourse" class="container-fluid py-5 myContShow myContAcademy">
-        <div class="row justify-content-center py-5">
+        <div class="row justify-content-center">
             <div class="col-12 colShowCourse bg-dark">
                 <h1 id="dettaglioCourse" class="text-center tx-m align items center justify-content-center ff-m h1ShowCourse h2ShowCourseAnim">Dettaglio del Corso <span id="Academy2" class="display-4 tx-s spanShowCourse spanShowCourseAnim">{{$course->name}}</span>
                 </h1>
@@ -44,13 +44,17 @@
                     
                     </ul>
                     <div class="card-body d-flex justify-content-around">
+
+                        @if(Auth::user() && Auth::id() == $course->user_id)
+                        
                         <a href="{{route('course.edit', compact('course'))}}" type="button" class="btn btn-light btn-lg rounded-0 btnModifica tx-s fw-bold fs-6 text-center">Modifica</a>
                         <form method="POST" action="{{route('course.delete', compact('course'))}}" class="d-inline">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-light btn-lg rounded-0 btnElimina tx-s fw-bold fs-6 text-center">Elimina</button>
                         </form>
-                        {{-- <a href="{{route('course.delete', compact('course'))}}" type="button" class="btn btn-light btn-lg rounded-0 btnElimina tx-s fw-bold fs-6 text-center">Elimina</a> --}}
+
+                        @endif
                     </div>
                     <div class="card-body d-flex justify-content-center align-items-center">
                     <a href="{{route('course.index', compact('course'))}}" type="button" class="btn btn-light btn-lg rounded-0 btnIndietro tx-s fw-bold fs-6 text-center">Torna Indietro</a>
