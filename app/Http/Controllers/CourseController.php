@@ -6,6 +6,7 @@ use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Http\Requests\CourseRequest;
 use App\Http\Requests\CourseeditRequest;
+use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
@@ -50,6 +51,7 @@ class CourseController extends Controller
             'startdate' =>$request->startdate,
             'certificate' =>$request->certificate,
             'coverimg' => $coverimg,
+            'user_id' => Auth::user()->id,
         ]);
             return redirect(route('course.index'))->with('courseCreated', 'Il corso è stato aggiunto correttamente.');
     }

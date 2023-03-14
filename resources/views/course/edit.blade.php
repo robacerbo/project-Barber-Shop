@@ -44,7 +44,7 @@
                     
                     <!-- Stylist Name -->
                     <div class="mb-3 px-5 text-center">
-                        <label class="form-label ff-m lead tx-t" for="stylist">Creato da</label>
+                        <label class="form-label ff-m lead tx-t" for="stylist">Nome Stilista</label>
                         <input class="form-control @error('title') is-invalid @enderror" id="stylist" name="stylist" type="text" placeholder="Nome dello Stilista" data-sb-validations="required, stylist" value="{{ $course->stylist}}">
                         @error('stylist')
                         <div class="alert alert-danger">{{ $message }}</div>

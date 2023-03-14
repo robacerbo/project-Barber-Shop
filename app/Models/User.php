@@ -41,4 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //FUNZIONE DI RELAZIONE - 1 UTENTE E' RELAZIONATO A PIU' CORSI
+    public function courses(){
+        //UN UTENTE HA PIU CORSI
+        return $this->hasMany(Course::class);
+    }
+
 }

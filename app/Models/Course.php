@@ -18,5 +18,12 @@ class Course extends Model
         'startdate',
         'certificate',
         'coverimg',
+        'user_id',
     ];
+
+    //UNA CONSOLE PUO' ESSERE RELAZIONATA AD UN SOLO UTENTE
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }
