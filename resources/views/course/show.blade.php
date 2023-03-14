@@ -6,6 +6,7 @@
                 </h1>
             </div>
         </div>
+        
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 py-5">
                 <div class="card h-100">
@@ -16,7 +17,7 @@
                     </div>
                     <ul class="list-group list-group-flush bg-white">
                         <ul class="bg-dark d-flex justify-content-between border-bottom px-0">
-                            <li class="list-group-item bg-dark tx-m border-0">Nome Stilista :</li>
+                            <li class="list-group-item bg-dark tx-m border-0">Creato da :</li>
                             <li class="list-group-item bg-dark tx-m border-0 text-end">{{$course->stylist}}</li>
                         </ul>
                         <ul class="bg-dark d-flex justify-content-between border-bottom px-0">
@@ -38,11 +39,18 @@
                     
                     
                     </ul>
-                    <div class="card-body text-center">
-                        <a href="{{route('course.index', compact('course'))}}" type="button" class="btn btn-light btn-lg rounded-0 btnCardAcademy tx-s fw-bold fs-6 text-center">Torna Indietro</a>
-                        <a href="#" type="button" class="btn btn-light btn-lg rounded-0 btnCardAcademy tx-s fw-bold fs-6 text-center">Acquista</a>
+                    <div class="card-body d-flex justify-content-around">
+                        <a href="{{route('course.edit', compact('course'))}}" type="button" class="btn btn-light btn-lg rounded-0 btnModifica tx-s fw-bold fs-6 text-center">Modifica</a>
+                        <form method="POST" action="{{route('course.delete', compact('course'))}}" class="d-inline">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-light btn-lg rounded-0 btnElimina tx-s fw-bold fs-6 text-center">Elimina</button>
+                        </form>
+                        {{-- <a href="{{route('course.delete', compact('course'))}}" type="button" class="btn btn-light btn-lg rounded-0 btnElimina tx-s fw-bold fs-6 text-center">Elimina</a> --}}
                     </div>
-                    
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                    <a href="{{route('course.index', compact('course'))}}" type="button" class="btn btn-light btn-lg rounded-0 btnIndietro tx-s fw-bold fs-6 text-center">Torna Indietro</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -14,6 +14,9 @@ Route::get('/contattaci/submit/successful', [PublicController::class, 'contact_u
 
 //ROTTE ACADEMY & COURSES
 Route::get('/academy/index', [CourseController::class, 'index'])->name('course.index');
-Route::get('/academy/CourseCreate', [CourseController::class, 'create'])->name('course.create');
-Route::post('/academy/CourseStore', [CourseController::class, 'store'])->name('course.store');
-Route::get('academy/show/{course}', [CourseController::class, 'show'])->name('course.show');
+Route::get('/academy/courseCreate', [CourseController::class, 'create'])->name('course.create');
+Route::post('/academy/courseStore', [CourseController::class, 'store'])->name('course.store');
+Route::get('/academy/courseShow/{course}', [CourseController::class, 'show'])->name('course.show');
+Route::get('/academy/courseEdit/{course}', [CourseController::class, 'edit'])->name('course.edit');
+Route::put('/academy/courseUpdate/{course}', [CourseController::class, 'update'])->name('course.update');
+Route::delete('/academy/courseDelete/{course}', [CourseController::class, 'destroy'])->name('course.delete');

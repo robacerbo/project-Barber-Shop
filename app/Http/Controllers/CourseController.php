@@ -2,12 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CourseRequest;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use App\Http\Requests\CourseRequest;
+use App\Http\Requests\CourseeditRequest;
 
 class CourseController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index', 'show');
+    }
+    
+    
+    
+    
+    
     public function index()
     {
 
@@ -25,6 +35,12 @@ class CourseController extends Controller
 
     public function store(CourseRequest $request){ 
         
+        if ($request->hasFile('coverimg')) {
+            $coverimg = $request->file('coverimg')->store('public/covers');
+        } else {
+            $coverimg = '/media/copertina-non-disponibile.jpg';
+        }
+
         $course = Course::create([
             'name' => $request->name,
             'description' =>$request->description,
@@ -33,7 +49,7 @@ class CourseController extends Controller
             'price' =>$request->price,
             'startdate' =>$request->startdate,
             'certificate' =>$request->certificate,
-            'coverimg' =>$request->file('coverimg')->store('public/covers'),
+            'coverimg' => $coverimg,
         ]);
             return redirect(route('course.index'))->with('courseCreated', 'Il corso è stato aggiunto correttamente.');
     }
@@ -45,4 +61,39 @@ class CourseController extends Controller
     }
 
 
+    public function edit(Course $course) {
+
+        return view('course.edit', compact('course'));
+
+    }
+
+    public function update(CourseeditRequest $request, Course $course)
+    {
+
+        $course->update([
+            'name' => $request->name,
+            'description' =>$request->description,
+            'stylist' =>$request->stylist,
+            'level' =>$request->level,
+            'price' =>$request->price,
+            'startdate' =>$request->startdate,
+            'certificate' =>$request->certificate,
+            
+        ]);
+
+        if($request->coverimg){
+            $course->update([
+                'coverimg' => $request->file('coverimg')->store('public/covers'),
+            ]);
+        }
+
+        return redirect(route('course.index'))->with('courseUpdated', 'Hai aggiornato correttamente il corso');
+
+    }
+
+    public function destroy(Course $course) {
+        $course->delete();
+
+        return redirect(route('course.index'))->with('courseDeleted', 'Hai eliminato correttamente la console');
+    }
 }

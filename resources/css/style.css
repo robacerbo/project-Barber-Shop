@@ -23,6 +23,7 @@
 
 body {
     background-color: var(--t-color);
+    overflow-x: hidden!important;
 }
 
 .tx-m {
@@ -236,7 +237,43 @@ from {
     transition: background-color 0.5s ease-out;
 }
 
+.btnModifica {
+  height: 45px;
+  width: 150px;
+  color: black !important;
+  border: 2px solid black;  
+}
+.btnModifica:hover {
+    background-color: rgb(212, 148, 22);
+    color: white!important;
+    border: 1px solid black;
+    transition: background-color 0.5s ease-out;
+}
 
+.btnElimina {
+  height: 45px;
+  width: 150px;
+  color: var(--s-color)!important;
+  border: 2px solid black;  
+}
+.btnElimina:hover {
+    background-color: var(--s-color);
+    color: white!important;
+    border: 1px solid black;
+    transition: background-color 0.5s ease-out;
+}
+.btnIndietro {
+  height: 45px;
+  width: 150px;
+  color: black !important;
+  border: 2px solid black;  
+}
+.btnIndietro:hover {
+    background-color: black;
+    color: white!important;
+    border: 1px solid black;
+    transition: background-color 0.5s ease-out;
+}
 
 /* CONTATTI */
 .myContForm {
