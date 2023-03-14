@@ -19,14 +19,14 @@
 
 </div>
 <div id="contForm" class="container-fluid py-5 h-100 myContForm">
-    <div class="row justify-content-center h-100 px-3 ">
+    <div class="row justify-content-center h-100 px-3">
         
         <div id="ColForm" class="col-12 col-md-6 py-5">
             <h1 class="text-center tx-s myRichiesta hidden">Scrivi la tua richiesta</h1>
              
 
   <!-- Bootstrap 5 starter form -->
-            <form id="contactForm" class="w-100 contactFormAni" method="POST" action="{{route('contact_us_submit')}}">
+            <form id="contactForm" class="w-100 contactFormAni border" method="POST" action="{{route('contact_us_submit')}}">
                 @csrf
             <!-- Name input -->
                 <div class="mb-3 px-5 text-center hidden-right">
@@ -81,13 +81,13 @@
                 </div> --}}
 
     <!-- Form submit button -->
-                <div class="d-grid gap-2 col-6 mt-5 d-flex m-auto mx-md-auto  hidden-top">
-                    <button class="btn btn-light btn-lg rounded-0 btnRichiesta tx-s fw-bold text-center m-auto ">Invia la tua Richiesta</button>
+                <div class="d-grid gap-2 col-6 mt-5 d-flex m-auto mx-md-auto  hidden-top py-3">
+                    <button class="btn btn-light btn-lg rounded-0 btnRichiesta tx-s fw-bold text-center m-auto">Invia la tua Richiesta</button>
                 </div>
 
             </form>
         </div>
-        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center order-md-first">
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center order-md-first py-3">
             <img id="imgContatta" src="/media/barber_pole.gif" class="img-fluid myImgContatta hidden-left" alt="">
         </div>
     </div>

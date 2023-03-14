@@ -53,3 +53,11 @@ hiddenDown.forEach((el) => observer.observe(el));
 const popoutIn = document.querySelectorAll('.popoutin');
 popoutIn.forEach((el) => observer.observe(el));
 
+
+// MODAL LOGIN
+// const myModal = document.getElementById('myModal')
+// const myInput = document.getElementById('myInput')
+
+// myModal.addEventListener('shown.bs.modal', () => {
+//   myInput.focus()
+// })

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 //ROTTA HOMEPAGE
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+
 //ROTTA CONTATTACI
 Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contact_us');
 Route::post('/contattaci/submit', [PublicController::class, 'contact_us_submit'])->name('contact_us_submit');

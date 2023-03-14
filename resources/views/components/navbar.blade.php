@@ -32,15 +32,25 @@
                 <a class="nav-link tx-m text-center" href="{{route('contact_us')}}">Contattaci</a>
               </li>
               <div class="dropdown-center text-center">
-                <button class="btn btnPrenota2 dropdown-toggle tx-m"type="button" data-bs-toggle="dropdown"aria-expanded="false">
-                  Accedi | Registrati
-                </button>
-                <ul class="dropdown-menu w-50 bg-dark border-white text-center mx-auto">
-                  <li><a class="dropdown-item tx-m" href="#">Accedi</a></li>
-                  <li><a class="dropdown-item tx-m" href="{{route('register')}}">Registrati</a><li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item tx-m" href="#">Logout</a></li>
-                </ul>
+                @auth
+                  <button class="btn btnPrenota2 dropdown-toggle tx-m"type="button" data-bs-toggle="dropdown"aria-expanded="false">
+                    Benvenuto {{Auth::user()->name}}
+                  </button>
+                  <ul class="dropdown-menu w-50 bg-dark border-white text-center mx-auto">
+                    <li><a class="dropdown-item tx-m" href="#">Profilo</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item tx-m" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
+                    <form action="{{route('logout')}}" method="POST" id="form-logout"class="d-none">@csrf</form>
+                @else
+
+                  <button class="btn btnPrenota2 dropdown-toggle tx-m"type="button" data-bs-toggle="dropdown"aria-expanded="false">
+                    Accedi | Registrati
+                  </button>
+                  <ul class="dropdown-menu w-50 bg-dark border-white text-center mx-auto">
+                    <li><a class="dropdown-item tx-m" href="{{route('login')}}">Accedi</a></li>
+                    <li><a class="dropdown-item tx-m" href="{{route('register')}}">Registrati</a><li>
+                  </ul>
+                @endauth
               </div>
             </li>
           </ul>

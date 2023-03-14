@@ -42,7 +42,7 @@
             </div>
             
             <div class="col-12 col-md-6">
-                <h1 id="Academy2" class="display-3 tx-s text-md-start text-center hidden popoutin">Academy</h1>
+                <h1 id="Academy2" class="display-3 tx-s text-md-start text-center hidden">Academy</h1>
             </div>
             <h5 class="text-center tx-t align items center justify-content-center ff-m hidden">La nostra accademia, sotto l’occhio attento dei nostri barber,<br> propone corsi accurati teorici e pratici per apprendere tutti i segreti del mestiere</h5>
         </div>
