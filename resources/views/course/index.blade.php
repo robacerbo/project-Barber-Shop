@@ -2,7 +2,7 @@
 
 
     <div id="Academy" class="container-fluid py-5 myContAcademy">
-        <div class="row justify-content-center py-5">
+        <div class="row justify-content-center">
             <div class="col-12 colOnlyAcademy">
                 <h1 id="OnlyMy" class="display-3 text-center tx-m align items center justify-content-center ff-m h1Only h1OnlyAnim">Only My...<span id="Academy2" class="display-3 tx-s spanAcademy spanAcademyAnim">Academy</span>
                 </h1>
@@ -36,6 +36,11 @@
         @if (session('courseUpdated'))
         <div class="alert alert-warning">
         {{ session('courseUpdated') }}
+        </div>
+        @endif
+        @if (session('accessDenied'))
+        <div class="alert alert-warning">
+        {{ session('accessDenied') }}
         </div>
         @endif
             <div class="row p-md-5 p-3 h-100">

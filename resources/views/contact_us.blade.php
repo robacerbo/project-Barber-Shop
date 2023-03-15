@@ -29,7 +29,7 @@
             <form id="contactForm" class="w-100 contactFormAni border" method="POST" action="{{route('contact_us_submit')}}">
                 @csrf
             <!-- Name input -->
-                <div class="mb-3 px-5 text-center hidden-right">
+                <div class="mb-3 px-5 text-center hidden-left">
                     <label class="form-label ff-m lead tx-t" for="name">Nome e Cognome</label>
                     <input class="form-control ff-m lead @error('name') is-invalid @enderror" id="name" name="name" type="text" placeholder="Inserisci il tuo nome" data-sb-validations="required" value="{{ old('name') }}" />
                     <div class="invalid-feedback bg-alert" data-sb-feedback="name:required">Nome è obbligatorio.</div>
@@ -43,7 +43,7 @@
                 </div>
 
             <!-- Email address input -->
-                <div class="mb-3 px-5 text-center hidden-right">
+                <div class="mb-3 px-5 text-center hidden-left">
                     <label class="form-label ff-m lead tx-t" for="email">Indirizzo Email</label>
                     <input class="form-control @error('email') is-invalid @enderror" id="email" name="email" type="email" placeholder="Inserisci la tua mail" data-sb-validations="required, email" value="{{ old('email') }}" />
                     <div class="invalid-feedback bg-alert" data-sb-feedback="emailAddress:required">Email è obbligatoria, inserisci una mail valida.</div>
@@ -57,7 +57,7 @@
                 </div>
 
     <!-- Message input -->
-                <div class="mb-3 px-5 text-center hidden-right">
+                <div class="mb-3 px-5 text-center hidden-left">
                     <label class="form-label ff-m lead tx-t" for="message">Lascia il tuo messaggio</label>
                     <textarea class="form-control  @error('message') is-invalid @enderror" id="message" name="message" type="text" placeholder="Scrivi il tuo messaggio qui" style="height: 10rem;" data-sb-validations="required" value="{{ old('message') }}"></textarea>
                     <div class="invalid-feedback bg-alert" data-sb-feedback="message:required">Hai dimenticato di inserire il messaggio.</div>

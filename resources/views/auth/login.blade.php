@@ -12,7 +12,7 @@
 
     <div class="container-fluid p-0 bg-img-contatti">
         <div class="container-fluid pt-5">
-            <div class="row justify-content-end align-items-center py-5">
+            <div class="row justify-content-end align-items-center">
                 <div class="col-12 colOnlyAcademy m-0 p-0 popoutin">
                     <h1 id="OnlyMy" class="display-3 text-center bg-dark m tx-s ff-m">Accedi alla tua Area Personale
                     </h1>
@@ -24,7 +24,7 @@
                         @csrf
                                                 
                         <!-- Email address input -->
-                        <div class="mb-3 px-5 text-center hidden-left">
+                        <div class="mb-3 px-5 text-center hidden">
                             <label class="form-label ff-m lead tx-m" for="email">Indirizzo Email</label>
                             <input class="form-control @error('email') is-invalid @enderror" id="email" name="email" type="email" placeholder="Inserisci la tua mail" data-sb-validations="required, email"/>
                             <div class="invalid-feedback bg-alert" data-sb-feedback="emailAddress:required">Email è obbligatoria, inserisci una mail valida.</div>
@@ -38,7 +38,7 @@
                         </div>
                         
                         <!-- Password input -->
-                        <div class="mb-3 px-5 text-center hidden-left">
+                        <div class="mb-3 px-5 text-center hidden">
                             <label class="form-label ff-m lead tx-m" for="password">Password</label>
                             <input class="form-control @error('password') is-invalid @enderror" id="password" name="password" type="password" placeholder="Inserisci la tua password" data-sb-validations="required, password"/>
                             <div class="invalid-feedback bg-alert" data-sb-feedback="passwordAddress:required">Password è obbligatoria, inserisci una password valida.</div>

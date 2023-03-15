@@ -65,6 +65,9 @@ class CourseController extends Controller
 
     public function edit(Course $course) {
 
+        if($course->user_id != Auth::id()){
+            return redirect(route('course.index'))->with('accessDenied', 'Non sei autorizzato ad eseguire questa operazione');
+        }
         return view('course.edit', compact('course'));
 
     }

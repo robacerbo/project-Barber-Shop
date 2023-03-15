@@ -71,6 +71,7 @@ body {
 .navbar {
     height: 10vh;
     transition: .4s;
+    
 
 
 }
@@ -78,6 +79,8 @@ body {
 .nav-active {
     background-color: #212529;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
 }
 
 .offcanvas {
