@@ -28,7 +28,7 @@
                         {{-- <p>New York</p> --}}
                         </div>
                     </div>
-                    <div class="container p-4 text-black align-items-center" style="background-color: #f8f9fa;">
+                    <div class="container p-4 mt-3 text-black align-items-center" style="background-color: #f8f9fa;">
                         <div class="row align-items-center">
                             <div class="col-12 col-md-6 py-2">
                             <form action="{{route('changeAvatar', ['user'=> Auth::user()])}}" method="POST" enctype="multipart/form-data">
@@ -39,24 +39,24 @@
                                 style="z-index: 1;">
                                 Modifica Foto
                                 </button>
-                                <input type="file" name="avatar">
+                                <input type="file" name="avatar" class="mt-2">
                                 </form>
                                 
                             </div>
-                        <div class="col-12 col-md-6 d-flex justify-content-end text-center py-2">
-                            <div>
-                                <p class="mb-1 h5">253</p>
-                                <p class="small text-muted mb-0">Photos</p>
+                            <div class="col-12 col-md-6 d-flex justify-content-end text-center py-2">
+                               {{--  <div>
+                                    <p class="mb-1 h5">253</p>
+                                    <p class="small text-muted mb-0">Photos</p>
+                                </div>
+                                <div class="px-3">
+                                    <p class="mb-1 h5">1026</p>
+                                    <p class="small text-muted mb-0">Followers</p>
+                                </div>
+                                <div>
+                                    <p class="mb-1 h5">478</p>
+                                    <p class="small text-muted mb-0">Following</p>
+                                </div> --}}
                             </div>
-                            <div class="px-3">
-                                <p class="mb-1 h5">1026</p>
-                                <p class="small text-muted mb-0">Followers</p>
-                            </div>
-                            <div>
-                                <p class="mb-1 h5">478</p>
-                                <p class="small text-muted mb-0">Following</p>
-                            </div>
-                        </div>
                         </div>
                     </div>
                         <div class="card-body p-4 text-black">
