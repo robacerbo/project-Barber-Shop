@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 //ROTTA HOMEPAGE
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
-Route::get('/profile', [PublicController::class, 'profile'])->name('profile');
+Route::get('/profile/{user?}', [PublicController::class, 'profile'])->name('profile');
+Route::put('/profile/avatar/{user}', [PublicController::class, 'changeAvatar'])->name('changeAvatar');
 
 //ROTTA CONTATTACI
 Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contact_us');

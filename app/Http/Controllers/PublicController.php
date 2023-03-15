@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Course;
 use App\Mail\ContactEmail;
 use Illuminate\Http\Request;
@@ -36,17 +37,31 @@ class PublicController extends Controller
         return view('contact_us_successful');
     }
 
-    public function profile(){
+    public function profile(User $user = NULL){
         //PRIMO METODO: SFUTTARE RELAZIONE
         // return view('profile');
 
+        if(!$user){
+            $courses = Course::where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
+        }   else {
+            $courses = Course::where('user_id', $user->id)->orderBy('created_at', 'DESC')->get();
+        }
 
+        return view('profile', compact('courses'));
 
+        // $courses = Course::where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
         // FLUENT INTERFACE + METHOD CHAINING
         //SECONDO METODO: SFRUTTARE UNA QUERY AL DATABASE
-        $courses = Course::where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
         //$query (c'è ma è nascosta) --> where --> orderBy --> get
         //tutti i record--> recupera solo quelli dell'utente loggato--> ordinameli --> crea collezione
-        return view('profile', compact('courses'));
+    }
+
+    public function changeAvatar(User $user, Request $request){
+        
+        $user->update([
+            'avatar' => $request->file('avatar')->store('public/avatars')
+        ]);
+
+        return redirect()->back()->with('avatarUpdated', 'Hai aggiornato correttamente la tua foto profilo');
     }
 }

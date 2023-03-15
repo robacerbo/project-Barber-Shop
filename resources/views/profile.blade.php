@@ -13,22 +13,37 @@
                 <div class="col-12 col-md-10">
                     <div class="card">
                     <div class="rounded-top text-white d-flex flex-row topCardProfile">
-                        <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
-                            alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
-                            style="width: 150px; z-index: 1">
-                        <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
-                            style="z-index: 1;">
-                            Modifica Foto
-                        </button>
+                            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                            
+                                <img src="{{Storage::url(Auth::user()->avatar)}}"
+                                    alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                                    style="width: 150px; z-index: 1">
+                                                                            
+                                    {{-- <input type="file" name="avatar">
+                        </form> --}}
                         </div>
+                        
                         <div class="ms-3" style="margin-top: 130px;">
                         <h5>{{Auth::user()->name}}</h5>
                         {{-- <p>New York</p> --}}
                         </div>
                     </div>
-                    <div class="p-4 text-black" style="background-color: #f8f9fa;">
-                        {{-- <div class="d-flex justify-content-end text-center py-1">
+                    <div class="container p-4 text-black align-items-center" style="background-color: #f8f9fa;">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 py-2">
+                            <form action="{{route('changeAvatar', ['user'=> Auth::user()])}}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                @method('put')
+                                
+                                <button type="submit" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                                style="z-index: 1;">
+                                Modifica Foto
+                                </button>
+                                <input type="file" name="avatar">
+                                </form>
+                                
+                            </div>
+                        <div class="col-12 col-md-6 d-flex justify-content-end text-center py-2">
                             <div>
                                 <p class="mb-1 h5">253</p>
                                 <p class="small text-muted mb-0">Photos</p>
@@ -41,7 +56,8 @@
                                 <p class="mb-1 h5">478</p>
                                 <p class="small text-muted mb-0">Following</p>
                             </div>
-                        </div> --}}
+                        </div>
+                        </div>
                     </div>
                         <div class="card-body p-4 text-black">
                             <div class="mb-5">

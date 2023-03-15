@@ -28,7 +28,7 @@
             </ul>
             <ul class="bg-dark d-flex justify-content-between border-bottom px-0">
                 <li class="list-group-item bg-dark tx-m border-0">Corso Creato da :</li>
-                <li class="list-group-item bg-dark tx-m border-0 text-end">{{$course->user->name}}</li>
+                <a href="{{route('profile', ['user' => $course->user->id])}}"><li class="list-group-item bg-dark tx-m border-0 text-end">{{$course->user->name}}</li></a>
             </ul>
         
         

@@ -53,6 +53,20 @@ hiddenDown.forEach((el) => observer.observe(el));
 const popoutIn = document.querySelectorAll('.popoutin');
 popoutIn.forEach((el) => observer.observe(el));
 
+//CHANGE AVATAR BTN
+/* let chooseAvatarBtn = document.getElementById('choose-avatar-btn');
+    chooseAvatarBtn.addEventListener('click', function() {
+        let fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.name = 'avatar';
+        fileInput.style.display = 'none';
+        fileInput.addEventListener('change', function() {
+            let avatarForm = document.getElementById('avatar-form');
+            avatarForm.submit();
+        });
+        /* document.body.appendChild(fileInput);
+        fileInput.click(); */
+
 
 // MODAL LOGIN
 // const myModal = document.getElementById('myModal')
